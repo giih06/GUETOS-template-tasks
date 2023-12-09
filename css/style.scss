@@ -3,6 +3,8 @@
     --bs-purple-active: rgba(83, 70, 134, 0.1);
     --bs-gray: #EFF3F9;
     --bs-gray02: rgba(83, 70, 134, 0.1);
+    --bs-black01:rgba(0, 0, 0, .65);
+    --bs-black02: rgba(0, 0, 0, .85);
     --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI","Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
@@ -18,31 +20,31 @@ body {
     font-family: var(--bs-font-sans-serif);
 }
 
-.offcanvas-body {
-    background-color: var(--bs-gray);
-}
-
-.offcanvas-header {
-    background-color: var(--bs-white);
-}
-
 header {
     background-color: white;
 }
 
+// sidebar icon
 .bi-justify {
     color: var(--bs-purple);
     font-size: 2rem;
 }
 
+.bi-justify:hover {
+    color: var(--bs-white);
+    background-color: var(--bs-purple);
+    transition: all 0.5 ease;
+    opacity: 80%;
+}
+
+// icon de fechar sidebar
 .bi-chevron-left {
     font-size: 18px;
     color: var(--bs-purple);
 }
-
+// botão de fechar sidebar
 .back-btn {
     display: inline-block;
-    float: right;
     width: 35px;
     height: 35px;
     border-radius: 20px;
@@ -52,21 +54,22 @@ header {
     justify-content: center;
 }
 
-
-.bi-justify:hover {
-    color: var(--bs-white);
-    background-color: var(--bs-purple);
-    transition: all 0.5 ease;
-    opacity: 80%;
+// offcanvas
+.offcanvas-body {
+    background-color: var(--bs-gray);
 }
 
-
+.offcanvas-header {
+    background-color: var(--bs-white);
+}
+// logo guetos
 .offcanvas-title {
     text-align: left;
     width: 35px;
     height: 35px;
 }
 
+// Tópicos do offcanvas 
 .general {
     background-color: var(--bs-gray02);
 }
@@ -75,63 +78,57 @@ header {
     color: var(--bs-purple);
 }
 
-// off canvas list
-
+// off canvas botoes
 
 .btn:hover {
     color: #212529;
 }
 
-[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
-    cursor: pointer;
-}
+// btn-toggle
 
 .btn-toggle {
     display: inline-flex;
     align-items: center;
     padding: 0.25rem 0.5rem;
     font-weight: 600;
-    color: rgba(0, 0, 0, .65);
+    color: var(--bs-black01);
     background-color: transparent;
     border: 0;
 }
 
-// btn-toggle
-  .btn-toggle:hover,
-  .btn-toggle:focus {
-    color: rgba(0, 0, 0, .85);
+.btn-toggle:hover,
+.btn-toggle:focus {
+    color: var(--bs-black02);
     background-color: var(--bs-purple-active);
-  }
-  
-  .btn-toggle::before {
+}
+
+.btn-toggle::before {
     width: 1.25em;
     line-height: 0;
     content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
     transition: transform .35s ease;
     transform-origin: .5em 50%;
-  }
-  
-  .btn-toggle[aria-expanded="true"] {
-    color: rgba(0, 0, 0, .85);
-  }
-  .btn-toggle[aria-expanded="true"]::before {
+}
+
+.btn-toggle[aria-expanded="true"] {
+    color: var(--bs-black02);
+}
+
+.btn-toggle[aria-expanded="true"]::before {
     transform: rotate(90deg);
-  }
-  
-  .btn-toggle-nav a {
+}
+
+.btn-toggle-nav a {
     display: inline-flex;
     padding: .1875rem .5rem;
     margin-top: .125rem;
     margin-left: 1.25rem;
     text-decoration: none;
-  }
+}
 
-  .btn-toggle-nav a:hover,
-  .btn-toggle-nav a:focus {
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
     background-color: var(--bs-purple-active);
-  }
+}
   
-  .scrollarea {
-    overflow-y: auto;
-  }
 
